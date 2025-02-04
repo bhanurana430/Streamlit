@@ -16,22 +16,15 @@ projects = st.Page(
     icon = '🔨'
 )
 
-contact = st.Page(
-    page = 'views/contact.py',
-    title = 'Contact Us',
-    icon = '📞'
-)
 
 #Navigation
 
 # st.sidebar.title('Navigation')
 st.sidebar.text('Made by Bhanu <3')
 
-pg = st.navigation(pages=[landing, projects, contact])
-
 pg = st.navigation(
     {
-        'Info': [landing,contact],
+        'Info': [landing],
         'Projects': [projects]
     }
 )
