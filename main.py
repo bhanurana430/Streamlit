@@ -26,7 +26,6 @@ blogs = st.Page(
 #Navigation
 
 # st.sidebar.title('Navigation')
-st.sidebar.text('Made by Bhanu <3')
 
 pg = st.navigation([landing, projects, blogs])
 

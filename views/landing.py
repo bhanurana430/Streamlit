@@ -71,12 +71,14 @@ st.write(
 # --- SKILLS ---
 st.write("\n")
 st.subheader("Hard Skills", anchor=False)
-st.write(
-    """
-    - Programming: Python, SQL, JavaScript - Basic
-    - ML/DL/DRL: Scikit-learn, Pytorch, TensorFlow - Keras API, Stable Baselines3, OpenAI Gym etc.
-    - Data Visualization: Matplotlib, PowerBI
-    - Databases: Postgres
-    - Web Development: HTML, CSS, Flask, Streamlit, Basic knowledge of fronted frameworks like React and VueJS
-    """
-)
+st.divider()
+
+skills = ['Python', 'Machine Learning', 'Deep Learning', 'Data Analysis', 'SQL', 'Git', 'Web Development', 'Time Series Analysis', 'DRL', 'Computer Vision', 'HTML', 'CSS', 'JavaScript', 'Linux', 'Power BI', 'Excel']
+
+cols = st.columns(4, gap='medium',vertical_alignment='center')
+
+for i, skill in enumerate(skills):
+    with cols[i % 4]:
+        st.write(f'***{skill}***')
+
+st.divider()

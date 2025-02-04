@@ -51,7 +51,7 @@ projects = [
 ]
 
 # Display projects as cards
-col1, col2 = st.columns(2, gap='medium')  # Create columns dynamically
+col1, col2 = st.columns(2, gap='large')  # Create columns dynamically
 
 for i, project in enumerate(projects):
     if project["col"] == 1:
