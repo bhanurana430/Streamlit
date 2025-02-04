@@ -27,13 +27,21 @@ with col2:
 
     st.divider()
 
+    resume_url = 'static/Bhanu CV.pdf'
+
     b1,b2 = st.columns(2, gap='small',vertical_alignment='center')
     with b1:
         if st.button('Contact Me'):
             show_contact()
     with b2:
-        if st.button('Resume'):
-            st.write('Resume')
+        st.download_button(
+                label="Resume",
+                data=open(resume_url, "rb").read(),
+                file_name="Resume_Bhanu.pdf",
+                mime="application/pdf"
+            )
+        
+
 
 st.divider()
 

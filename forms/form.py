@@ -1,5 +1,5 @@
 import re
-
+import pandas as pd
 import streamlit as st
 import requests  # pip install requests
 
@@ -15,7 +15,7 @@ def is_valid_email(email):
 git_url = "https://github.com/bhanurana430"
 git_image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIOVOH4NHf85lJfAD7WCeOrqx3gvTLWl5eVQ&s"
 
-li_url = "www.linkedin.com/in/bhanu002"
+li_url = "https://www.linkedin.com/in/bhanu002/"
 li_image = "https://i.pinimg.com/564x/6b/ab/30/6bab3017350ca04c6fa05569672bd31e.jpg"
 
 def contact_form():
@@ -71,3 +71,20 @@ def contact_form():
         #     st.success("Your message has been sent successfully! 🎉", icon="🚀")
         # else:
         #     st.error("There was an error sending your message.", icon="😨")
+
+        # Define the CSV file path
+        csv_file = "contact_form_data.csv"
+        
+        # Check if the CSV file already exists
+        try:
+            # Read existing data (if any)
+            df = pd.read_csv(csv_file)
+        except FileNotFoundError:
+            # If the file doesn't exist, create a new one with headers
+            df = pd.DataFrame(columns=["email", "name", "message"])
+        
+        # Append the new data
+        df = df._append(data, ignore_index=True)
+        
+        # Save the updated data back to the CSV file
+        df.to_csv(csv_file, index=False)

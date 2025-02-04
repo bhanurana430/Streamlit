@@ -15,35 +15,35 @@ projects = [
     },
     {
         "name": "Backtesting - VectorBt",
-        "image": "static/project img/DRL.jpg",
+        "image": "static/project img/Vector.png",
         "short_desc": "Using VectorBt library to analyze and backtest trading strategies",
         "page": "VectorBT",
         "col" : 2
     },
     {
         "name": "LSMT Forecasting on financial data",
-        "image": "static/project img/DRL.jpg",
-        "short_desc": "Using Long Short Term Memory networks to forecast stock prices - Regression and Classification", 
+        "image": "static/project img/lstm.png",
+        "short_desc": "Using Long Short Term Memory networks to forecast stock prices", 
         "page": "LSTM-forecasting",
         "col" : 1
     },
     {
         "name": "Titanic Survival Prediction",
-        "image": "static/project img/DRL.jpg",
+        "image": "static/project img/titanic.jpg",
         "short_desc": "Full FLedged ML project to predict survival on Titanic dataset - With deployed website",
         "page": "titanic",
         "col" : 2
     },
     {
         "name": "Table Tennis Analyzer",
-        "image": "static/project img/DRL.jpg",
+        "image": "static/project img/tt.jpg",
         "short_desc": "Leveraging OpenCV to analyze table tennis matches and provide insights - Includes an automated scoreboard",
         "page": "table-tennis",
         "col" : 1
     },
     {
         "name": "Time Series Analysis",
-        "image": "static/project img/DRL.jpg",
+        "image": "static/project img/time.png",
         "short_desc": "Less of a project, more of a learning journey - Includes various time series forecasting techniques and models",
         "page": "time-series",
         "col" : 2
@@ -51,7 +51,7 @@ projects = [
 ]
 
 # Display projects as cards
-col1, col2 = st.columns(2)  # Create columns dynamically
+col1, col2 = st.columns(2, gap='medium')  # Create columns dynamically
 
 for i, project in enumerate(projects):
     if project["col"] == 1:
