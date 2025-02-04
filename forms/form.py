@@ -12,8 +12,27 @@ def is_valid_email(email):
     email_pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
     return re.match(email_pattern, email) is not None
 
+git_url = "https://github.com/bhanurana430"
+git_image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIOVOH4NHf85lJfAD7WCeOrqx3gvTLWl5eVQ&s"
+
+li_url = "www.linkedin.com/in/bhanu002"
+li_image = "https://i.pinimg.com/564x/6b/ab/30/6bab3017350ca04c6fa05569672bd31e.jpg"
 
 def contact_form():
+
+    st.divider()
+
+    c1, c2 = st.columns(2, gap='small',vertical_alignment='center',)
+
+    
+    with c1:
+        st.image("static/github copy.png", width=100)
+        st.markdown(f"[----GitHub]({git_url})")
+    with c2:
+        st.image("static/linkedin.png", width=100)
+        st.markdown(f"[----Linkedin]({li_url})")
+    st.divider()
+
     with st.form("contact_form"):
         name = st.text_input("First Name")
         email = st.text_input("Email Address")

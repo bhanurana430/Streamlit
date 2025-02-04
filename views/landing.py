@@ -13,7 +13,7 @@ col1, col2 = st.columns(2, gap='small',vertical_alignment='center')
 
 with col1:
     st.image('static/bhanu-photo.png', width=250)
-    st.write('')
+    st.write('*The things you own end up owning you*')
 
 with col2:
     st.title('Bhanu Pratap Singh')
