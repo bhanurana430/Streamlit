@@ -17,7 +17,13 @@ with col1:
 
 with col2:
     st.title('Bhanu Pratap Singh')
-    st.write('AI student - Passionate about AI use cases, their implementation in real world scenarios, as well as using data to make informed decisions.')
+    st.write(
+        '''
+        AI student - Passionate about AI use cases, their implementation in real world scenarios, as well as using data to make informed decisions.
+
+        I am open to work on projects, collaborations, and internships 😁
+             
+        ''')
 
     st.divider()
 
@@ -52,8 +58,7 @@ st.write(
        - Oct 2022 - Present
        - ***Grade: 2.2*** (German Grading System)
        - During my 5 semesters of study here, I gained a lot of knowledge and experience in basic foundation of computer science, mathematics, machine learning, web development, and data science.
-    """
-)
+    """)
 
 # --- SKILLS ---
 st.write("\n")

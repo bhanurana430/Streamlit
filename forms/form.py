@@ -26,15 +26,15 @@ def contact_form():
 
     
     with c1:
-        st.image("static/github copy.png", width=100)
+        st.image("static/github copy.png", width=75)
         st.markdown(f"[----GitHub]({git_url})")
     with c2:
-        st.image("static/linkedin.png", width=100)
+        st.image("static/linkedin.png", width=75)
         st.markdown(f"[----Linkedin]({li_url})")
     st.divider()
 
     with st.form("contact_form"):
-        name = st.text_input("First Name")
+        name = st.text_input("First and Last Name")
         email = st.text_input("Email Address")
         message = st.text_area("Your Message")
         submit_button = st.form_submit_button("Submit")
@@ -64,9 +64,10 @@ def contact_form():
         data = {"email": email, "name": name, "message": message}
         # response = requests.post(WEBHOOK_URL, json=data)
 
+        with st.spinner("Sending your message..."):
+            st.success("Your message has been sent successfully! 🎉", icon="🚀")
+
         # if response.status_code == 200:
         #     st.success("Your message has been sent successfully! 🎉", icon="🚀")
         # else:
         #     st.error("There was an error sending your message.", icon="😨")
-
-        st.success("Your message has been sent successfully! 🎉", icon="🚀")

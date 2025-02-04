@@ -5,7 +5,7 @@ import streamlit as st
 landing = st.Page(
     page = 'views/landing.py',
     title = 'Home',
-    icon = '🏠',
+    icon = '',
     default = True
 )
 
@@ -13,7 +13,13 @@ landing = st.Page(
 projects = st.Page(
     page = 'views/projects.py',
     title = 'Projects',
-    icon = '🔨'
+    icon = ''
+)
+
+blogs = st.Page(
+    page = 'views/blogs.py',
+    title = 'Blogs',
+    icon = ''
 )
 
 
@@ -22,12 +28,7 @@ projects = st.Page(
 # st.sidebar.title('Navigation')
 st.sidebar.text('Made by Bhanu <3')
 
-pg = st.navigation(
-    {
-        'Info': [landing],
-        'Projects': [projects]
-    }
-)
+pg = st.navigation([landing, projects, blogs])
 
 # st.logo('static/bhanu-photo.jpeg')
 
