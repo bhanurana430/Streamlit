@@ -67,24 +67,24 @@ def contact_form():
         with st.spinner("Sending your message..."):
             st.success("Your message has been sent successfully! 🎉", icon="🚀")
 
-        # if response.status_code == 200:
-        #     st.success("Your message has been sent successfully! 🎉", icon="🚀")
-        # else:
-        #     st.error("There was an error sending your message.", icon="😨")
+        # # if response.status_code == 200:
+        # #     st.success("Your message has been sent successfully! 🎉", icon="🚀")
+        # # else:
+        # #     st.error("There was an error sending your message.", icon="😨")
 
-        # Define the CSV file path
-        csv_file = "contact_form_data.csv"
+        # # Define the CSV file path
+        # csv_file = "contact_form_data.csv"
         
-        # Check if the CSV file already exists
-        try:
-            # Read existing data (if any)
-            df = pd.read_csv(csv_file)
-        except FileNotFoundError:
-            # If the file doesn't exist, create a new one with headers
-            df = pd.DataFrame(columns=["email", "name", "message"])
+        # # Check if the CSV file already exists
+        # try:
+        #     # Read existing data (if any)
+        #     df = pd.read_csv(csv_file)
+        # except FileNotFoundError:
+        #     # If the file doesn't exist, create a new one with headers
+        #     df = pd.DataFrame(columns=["email", "name", "message"])
         
-        # Append the new data
-        df = df._append(data, ignore_index=True)
+        # # Append the new data
+        # df = df._append(data, ignore_index=True)
         
-        # Save the updated data back to the CSV file
-        df.to_csv(csv_file, index=False)
+        # # Save the updated data back to the CSV file
+        # df.to_csv(csv_file, index=False)
